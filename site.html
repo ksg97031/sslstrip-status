@@ -1,0 +1,19 @@
+<html>
+    <head><title>SSL Strip</title></head>
+    <style>
+        .red {color:red;}
+    </style>
+    <body>
+        <a id="taga" href="https://hacksg.com" style="display:none;">https://hacksg.com</a>
+
+        <h2>SSL Strip: <span id="status">Disabled</span></h2>
+        <script>
+            var taga_href = document.getElementById("taga").href;
+            if (taga_href.substring(0, 7) == 'http://'){ // if sslstrip enabled
+                const status = document.getElementById("status");
+                status.innerText = "Enabled";
+                status.style.color = "red";
+            }
+        </script>
+    </body>
+</html>
